@@ -17,7 +17,7 @@ import java.util.Date;
 public class PhoneCategory {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer category;
+    private Integer categoryId;
     private String categoryName;
     private Integer categoryType;
     private Date createTime;
