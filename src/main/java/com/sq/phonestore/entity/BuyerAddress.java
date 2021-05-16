@@ -1,6 +1,8 @@
 package com.sq.phonestore.entity;
 
 import lombok.Data;
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,16 +12,21 @@ import java.util.Date;
 
 /**
  * @author SunQiao
- * @create 2021-05-15 22:09
+ * @create 2021-05-16 9:16
  */
 @Data
 @Entity
-public class PhoneCategory {
+@DynamicInsert
+@DynamicUpdate
+public class BuyerAddress {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer category;
-    private String categoryName;
-    private Integer categoryType;
+    private Integer addressId;
+    private String buyerName;
+    private String buyerPhone;
+    private String buyerAddress;
+    private String areaCode;
     private Date createTime;
     private Date updateTime;
+
 }
